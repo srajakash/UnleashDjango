@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>In Love to Sreeshma</title>
-</head>
-<body>
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Blog</a></h1>
+        </div>
+        <div>
+            {% for post in posts %}
+                <div>
+                    <p> published: {{ post.published_date}} </p>
+                    <h2> <a href="">{{ post.title }} </a></h2>
+                    <p> {{ post.text|linebreaksbr }} </p>
+                    <br>
+                </div>
+            {% endfor %}
 
-<div align="center" style="padding:20%">
-    <span>
-        <h1>I Love you Sreeshma</h1>
-    </span>
-    <hr>
-    <span>
-        <h2>Let us live and love together forever</h2>
-    </span>
-</div>
-
-</body>
+        </div>
+    </body>
 </html>
